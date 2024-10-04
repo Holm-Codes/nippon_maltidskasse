@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  .logo img {
+    width: 250px;
+    padding: 10px;
+  }
+  .menu-points {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Adjusted to center the menu points */
+  }
+  .menu-points li {
+    position: relative; /* For at placere dropdown korrekt */
+    margin: 0 15px;
+  }
+  .menu-points a {
+    text-decoration: none;
+    color: #333;
+  }
+  .login-button {
+    background-color: #67b54b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .login-button {
+    background-color: #d13239;  /* Red background color */
+    color: white;               /* White text color */
+    border: none;               /* Remove default border */
+    padding: 10px 20px;         /* Add some padding */
+    font-size: 16px;            /* Set font size */
+    font-weight: bold;          /* Make text bold */
+    text-transform: lowercase;  /* Transform text to lowercase */
+    border-radius: 4px;         /* Round the corners */
+    cursor: pointer;            /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .login-button:hover {
+    background-color: #b82d33; /* Slightly darker red on hover */
+    box-shadow: 0 10 0 3px rgb(105, 6, 11); /* Add focus ring */
+  }
+  
+  .dropdown {
+      display: none; /* Skjuler dropdown som standard */
+      position: absolute; /* Gør det muligt at placere dropdown under menuen */
+      background-color: white; /* Baggrundsfarve for dropdown */
+      border: 1px solid #ccc; /* Kant for dropdown */
+      z-index: 1000; /* Sørger for, at dropdown er oven på andre elementer */
+  }
+  
+  .menu-points li:hover .dropdown {
+      display: block; /* Viser dropdown ved hover */
+  }
+  
+  .dropdown li {
+      list-style: none; /* Fjerner punkttegn */
+  }
+  
+  .dropdown li a {
+      display: block; /* Gør links til blokke for bedre klikbarhed */
+      padding: 10px; /* Indvendig afstand */
+      text-decoration: none; /* Fjerner understregning */
+      color: black; /* Tekstfarve */
+  }
+  
+  .dropdown li a:hover {
+      background-color: #f0f0f0; /* Baggrundsfarve ved hover */
+  }
