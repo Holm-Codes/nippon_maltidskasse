@@ -5,26 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nippon - Måltidskasser</title>
     <link rel="stylesheet" href="css/css.css">
-    <script src="js/script.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="js/js.js" defer></script>
 </head>
 <body>
     <nav class="menu">
         <a href="index.html">
             <div class="logo">
-                <img src="images/nippon-maaltidskasse-logo.webp" alt="Nippon Maaltidskasse Logo">
+                <img src="images/nippon-maaltidskasse-logo-kopi.webp" alt="Nippon Maaltidskasse Logo">
             </div>
         </a>
-        <ul class="menu-points">
-            <li>
-                <a href="#">Måltider</a>
-                <ul class="dropdown">
-                    <li><a href="#">Option 1</a></li>
-                    <li><a href="#">Option 2</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Om os</a></li>
-        </ul>
-        <button class="login-button">log ind</button>
+        <div class="right-menu">
+            <ul class="menu-points">
+                <li>
+                    <a href="index.html">Måltidskasser <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Måltidskasser</a></li>
+                        <li><a href="#">Opskrifter</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Om os</a></li>
+            </ul>
+            <div class="icon">
+                <img src="images/indkobsvogn-ikon.svg" alt="Indkøbsvogn">
+            </div>
+            <button class="login-knap">log ind</button>
+        </div>
     </nav>
+
+    <main class="maaltidskasse-side">
+        <div class="maaltidskasse-container">
+            <div class="maaltidskasse-billede">
+                <img src="images/maaltidskasse.webp" alt="Nippon Måltidskasser">
+            </div>
+            <div class="maaltidskasse-indhold">
+                <h1>Basis kassen</h1>
+                <p>
+                    En populær japansk madret, som mange elsker, er ramen. Ramen er en
+                    nudelsuppe, der stammer fra Kina, men som har udviklet sig til en uundgåelig del
+                    af japansk madkultur. Retten består typisk af bløde, bølgede hvedenudler,
+                    der serveres i en smagfuld bouillon, som kan være baseret på sojasauce, miso
+                    eller salt.
+                </p>
+                <div class="maaltidskasse-knapper">
+                    <div class="rullemenu">
+                        <button class="rullemenuknappe">Allergener</button>
+                        <div class="rullemenu-indhold">
+                            <label><input type="checkbox" name="allergen" value="gluten"> Gluten</label>
+                            <label><input type="checkbox" name="allergen" value="laktose"> Laktose</label>
+                            <label><input type="checkbox" name="allergen" value="nødder"> Nødder</label>
+                            <label><input type="checkbox" name="allergen" value="soya"> Soya</label>
+                            <label><input type="checkbox" name="allergen" value="skaldyr"> Skaldyr</label>
+                        </div>
+                    </div>
+                    <div class="rullemenu">
+                        <button class="rullemenuknappe">Ingredienser</button>
+                        <div class="rullemenu-indhold">
+                            <label><input type="checkbox" name="ingredient" value="nudler"> Nudler</label>
+                            <label><input type="checkbox" name="ingredient" value="æg"> Æg</label>
+                            <label><input type="checkbox" name="ingredient" value="grøntsager"> Grøntsager</label>
+                        </div>
+                    </div>
+                    <div class="rullemenu">
+                        <button class="rullemenuknappe">Diæt</button>
+                        <div class="rullemenu-indhold">
+                            <label><input type="checkbox" name="diet" value="vegetar"> Vegetar</label>
+                            <label><input type="checkbox" name="diet" value="vegansk"> Vegansk</label>
+                            <label><input type="checkbox" name="diet" value="glutenfri"> Glutenfri</label>
+                        </div>
+                    </div>
+                    <div class="rullemenu">
+                        <button class="rullemenuknappe">Størrelse</button>
+                        <div class="rullemenu-indhold">
+                            <label><input type="checkbox" name="size" value="lille"> Børne 400g</label>
+                            <label><input type="checkbox" name="size" value="medium"> Voksen 600g</label>
+                            <label><input type="checkbox" name="size" value="stor"> Voksen+ 800g</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="antal-beregner">
+                    <button id="fjern">-</button>
+                    <span id="antal">3</span>
+                    <button id="tilfoj">+</button>
+                </div>
+                <button class="tilfoj-kurv">Tilføj til kurv</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
