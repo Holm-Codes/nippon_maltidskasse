@@ -6,7 +6,7 @@
     <title>Nippon - Måltidskasser</title>
     <link rel="stylesheet" href="css/css.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <script src="js/js.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <nav class="menu">
@@ -41,12 +41,9 @@
             <div class="maaltidskasse-indhold">
                 <h1>Basis kassen</h1>
                 <p>
-                    En populær japansk madret, som mange elsker, er ramen. Ramen er en
-                    nudelsuppe, der stammer fra Kina, men som har udviklet sig til en uundgåelig del
-                    af japansk madkultur. Retten består typisk af bløde, bølgede hvedenudler,
-                    der serveres i en smagfuld bouillon, som kan være baseret på sojasauce, miso
-                    eller salt.
-                </p>
+                  Basis kassen giver dig en nem og lækker introduktion til det japanske køkken. Med friske ingredienser og smagfulde opskrifter kan du nemt tilberede autentiske retter som ramen, nudelskåle og risretter, der både mætter og begejstrer. Perfekt til dig, der ønsker et sundt og hurtigt måltid uden besvær – klar på under 30 minutter!
+                  </p>
+                  
                 <div class="maaltidskasse-knapper">
                     <div class="rullemenu">
                         <button class="rullemenuknappe">Allergener</button>
@@ -75,22 +72,101 @@
                         </div>
                     </div>
                     <div class="rullemenu">
-                        <button class="rullemenuknappe">Størrelse</button>
-                        <div class="rullemenu-indhold">
-                            <label><input type="checkbox" name="size" value="lille"> Børne 400g</label>
-                            <label><input type="checkbox" name="size" value="medium"> Voksen 600g</label>
-                            <label><input type="checkbox" name="size" value="stor"> Voksen+ 800g</label>
-                        </div>
-                    </div>
+                      <button class="rullemenuknappe">Størrelse</button>
+                      <div class="rullemenu-indhold">
+                          <label><input type="radio" name="size" value="400"> Børne 400g</label>
+                          <label><input type="radio" name="size" value="600"> Voksen 600g</label>
+                          <label><input type="radio" name="size" value="800"> Voksen+ 800g</label>
+                      </div>
+                    </div>                  
+                </div>
+                <div class="button-container">
+                  <button id="ryd-knap">Ryd valg</button>
                 </div>
                 <div class="antal-beregner">
                     <button id="fjern">-</button>
                     <span id="antal">3</span>
                     <button id="tilfoj">+</button>
                 </div>
+                <div id="pris">Pris: 300 kr</div>
                 <button class="tilfoj-kurv">Tilføj til kurv</button>
             </div>
         </div>
+
+        <div class="recipe-container">
+          <h1>Opskrift</h1>
+          <p>
+            Denne opskrift giver dig en smagfuld ramen med en fyldig fond, kombineret med ingefær, hvidløg og sojasauce. Nudlerne serveres med enten tofu eller kylling, og toppes med friske grøntsager som spinat og shiitake. Blødkogte æg fuldender retten, som er enkel at lave og fyldt med autentiske japanske smagsnuancer. Perfekt til et hurtigt, varmt måltid.
+          </p>              
+      
+          <div class="recipe-content">
+              <div class="ingredients">
+                  <h2>Ingredienser</h2>
+                  <ul id="ingredients-list">
+                    <li>2 liter grøntsags- eller kyllingefond</li>
+                    <li>4 fed hvidløg, knust</li>
+                    <li>1 stk. ingefær (ca. 5 cm), skåret i skiver</li>
+                    <li>2 spsk. sojasauce (eller tamari for glutenfri)</li>
+                    <li>1 spsk. sesamolie</li>
+                    <li>400 g nudler (normale eller glutenfri)</li>
+                    <li>200 g tofu eller kylling (baseret på diætvalg)</li>
+                    <li>200 g blandede grøntsager (f.eks. spinat og shiitake)</li>
+                    <li>4 æg (udelades ved vegansk valg)</li>
+                  </ul>                  
+              </div>
+              
+              <div class="instructions">
+                  <h2>Fremgangsmåde:</h2>
+                  <ol id="instructions-list">
+                    <li>Bring fonden i kog sammen med hvidløg og ingefær. Lad det simre i 20 minutter.</li>
+                    <li>Tilsæt sojasauce (eller tamari for glutenfri) og sesamolie. Smag til og lad det simre i yderligere 5 minutter.</li>
+                    <li>Kog nudlerne efter anvisning på pakken (glutenfri hvis valgt).</li>
+                    <li>Kog æggene i 6-7 minutter for blødkogte (udelad hvis vegansk).</li>
+                    <li>Steg tofu eller kylling, afhængigt af valg (udelades ved vegansk).</li>
+                    <li>Tilføj grøntsager (spinat og shiitake) lige før servering.</li>
+                    <li>Fordel nudlerne i skåle, hæld suppen over, og tilsæt topping efter diæt og præferencer.</li>
+                    <li>Server straks, mens retten er varm.</li>
+                  </ol>                  
+              </div>
+          </div>
+      </div>
+      
     </main>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Nippon Måltidskasser<br>
+                Spisepindevej 666<br>
+                Nipponland
+            </h3>
+            <button class="kontakt-knap">Kontakt</button>
+          </div>
+          <div class="footer-section">
+            <h3>Betaling</h3>
+            <ul>
+              <li>Visa</li>
+              <li>Mastercard</li>
+              <li>Mobilepay</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Juridisk</h3>
+            <ul>
+              <li>Vilkår og betingelser</li>
+              <li>Privatlivspolitik</li>
+              <li>Om Nippon</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>SoMe</h3>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+            </ul>
+          </div>
+        </div>
+      </footer>     
+
 </body>
 </html>
